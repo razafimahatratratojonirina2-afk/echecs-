@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Échecs 3D</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+  <h1>Échecs 3D</h1>
+  <p id="status" class="status" aria-live="polite"></p>
+  <div id="stage" aria-label="Échiquier 3D"></div>
+  <div class="controls">
+    <label>Mode
+      <select id="mode"><option value="1">Contre l’ordinateur</option><option value="2">2 joueurs</option></select>
+    </label>
+    <label>Vitesse
+      <select id="spd"><option value="1" selected>Lent</option><option value=".55">Normal</option><option value=".25">Rapide</option></select>
+    </label>
+    <span id="opts" class="opts">
+      <label>Niveau
+        <select id="lvl"><option value="0">Débutant</option><option value="1">Amateur</option><option value="2" selected>Normal</option><option value="3">Avancé</option><option value="4">Maître</option></select>
+      </label>
+      <label>Vous jouez
+        <select id="col"><option value="w">Blancs</option><option value="b">Noirs</option></select>
+      </label>
+    </span>
+  </div>
+  <div class="controls">
+    <button id="undo" type="button">Annuler</button>
+    <button id="flip" type="button">Pivoter</button>
+    <button id="new" type="button">Nouvelle partie</button>
+  </div>
+  <p id="log" class="log"></p>
+  <p class="note">Touchez une pièce, puis une case marquée. Promotion en dame. « Pivoter » change le côté de vue.</p>
+</main>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
